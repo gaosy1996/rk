@@ -9,15 +9,17 @@
 <body>
     <script>
             
-            var Arr=["a",2,4,5,"g","h"]
+       Arr=["a",2,4,"5g","h"]
 
-            for(var i =0;i<Arr.length;i++){
-                console.log(Arr[i])
+       function MyForeach(Arr,Fn){
+            for(var i = 0;i<Arr.length;i++){
+                Fn(Arr[i],i)
             }
-            
-            Arr.forEach((item,index) =>{
-                item
-            })
+       }
+       
+       MyForeach(Arr,(item,index)=>{
+           console.log(item)
+       })
 
             
     </script>
